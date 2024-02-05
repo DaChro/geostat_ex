@@ -200,7 +200,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"options":{"fig-cap":"","out-height":"","context":"interactive","fig-width":7,"results":"markup","label":"unnamed-chunk-1","fig-height":5,"autorun":"false","comment":"","out-width":"700px","output":"true","dpi":72,"warning":"true","message":"true","classes":""},"code":"1 + 1"},{"id":2,"options":{"fig-cap":"","out-height":"","context":"interactive","fig-width":7,"results":"markup","label":"unnamed-chunk-2","fig-height":5,"autorun":"false","comment":"","out-width":"700px","output":"true","dpi":72,"warning":"true","message":"true","classes":""},"code":"a <- 5/(5+345)\na\nb <- 2 * sin(pi/2)\nb\nc <- sqrt(16)+sqrt(25)\nc\n\n((5/(5+345)) + (2 * sin(pi/2))) / (sqrt(16)+sqrt(25))\n(a+b)/c # einfacher und lesbarer durch Nutzung von Variablen"},{"id":3,"options":{"fig-cap":"","out-height":"","context":"interactive","fig-width":7,"results":"markup","label":"unnamed-chunk-3","fig-height":5,"autorun":"false","comment":"","out-width":"700px","output":"true","dpi":72,"warning":"true","message":"true","classes":""},"code":"download.file(\n  'https://raw.githubusercontent.com/DaChro/geostat_ex/main/data/students.rdata',\n  'students.rdata'\n)\nload(\"students.rdata\")\nstr(students)"}];
+globalThis.qwebrCellDetails = [{"code":"1 + 1","options":{"out-width":"700px","fig-cap":"","fig-height":5,"classes":"","output":"true","results":"markup","label":"unnamed-chunk-1","dpi":72,"out-height":"","context":"interactive","comment":"","message":"true","autorun":"false","warning":"true","fig-width":7},"id":1},{"code":"a <- 5/(5+345)\na\nb <- 2 * sin(pi/2)\nb\nc <- sqrt(16)+sqrt(25)\nc\n\n((5/(5+345)) + (2 * sin(pi/2))) / (sqrt(16)+sqrt(25))\n(a+b)/c # einfacher und lesbarer durch Nutzung von Variablen","options":{"out-width":"700px","fig-cap":"","fig-height":5,"classes":"","output":"true","results":"markup","label":"unnamed-chunk-2","dpi":72,"out-height":"","context":"interactive","comment":"","message":"true","autorun":"false","warning":"true","fig-width":7},"id":2},{"code":"download.file(\n  'https://raw.githubusercontent.com/DaChro/geostat_ex/main/data/students.rdata',\n  'students.rdata'\n)\nload(\"students.rdata\")\nstr(students)","options":{"out-width":"700px","fig-cap":"","fig-height":5,"classes":"","output":"true","results":"markup","label":"unnamed-chunk-3","dpi":72,"out-height":"","context":"interactive","comment":"","message":"true","autorun":"false","warning":"true","fig-width":7},"id":3}];
 
 </script>
 <script type="module">
@@ -925,7 +925,13 @@ globalThis.qwebrExecuteCode = async function (
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
 <div id="quarto-sidebar-toc-left" class="sidebar toc-left">
-  
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#quarto" id="toc-quarto" class="nav-link active" data-scroll-target="#quarto"><span class="header-section-number">1</span> Quarto</a></li>
+  </ul>
+</nav>
 </div>
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
 </div>
@@ -1123,7 +1129,8 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </header>
 
 
-<p>## Quarto</p>
+<section id="quarto" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="quarto"><span class="header-section-number">1</span> Quarto</h2>
 <p>Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <a href="https://quarto.org" class="uri">https://quarto.org</a>.</p>
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
@@ -1131,6 +1138,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <div id="qwebr-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
 
 </main>
 <!-- /main column -->
