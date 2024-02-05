@@ -1,0 +1,22 @@
+project:
+  title: "geostat_ex"
+  output-dir: "./docs"
+  execute-dir: project
+
+editor: visual
+
+number-sections: true
+highlight-style: tango
+theme: [yeti, theme.scss]
+css: style.css
+code-block-bg: true
+code-block-border-left: "#7AB629"
+
+format: 
+  html:
+    
+    code-fold: false
+    smooth-scroll: true
+    toc: true
+    toc-location: left
+    toc-depth: 4
