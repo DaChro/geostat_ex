@@ -5,3 +5,8 @@ color: grey;
 .cell-output-stdout > * {
   color:grey;
 }
+
+
+.reveal pre.sourceCode code {
+	height: 200px;
+}
