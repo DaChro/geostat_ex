@@ -17,7 +17,7 @@ x =
 y = dbinom(x, size =, prob = )
 
 # Die folgende Zeile erstellt einen einfachen Plot zur Visualisierung.
-# Wenn du alles richtig gemacht hast, kannst du daring die 
+# Wenn du alles richtig gemacht hast, kannst du darin die 
 # Wahrscheinlichkeiten für einzelne Ergebnisse ablesen.
 plot(x, y, ylim = c(0, 1),  type = "h")
 
