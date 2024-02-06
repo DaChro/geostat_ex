@@ -1,0 +1,31 @@
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+
+
+---
+
+
+```{webr-r}
+
+#| context: setup
+
+webr::install("sp")
+
+
+# Download a dataset
+download.file(
+  'https://raw.githubusercontent.com/DaChro/geostat_ex/main/data/sic97.RData',
+  'sic97.RData'
+)
+load("sic97.RData")
+
+```
+
+```{webr-r}
+library(sp)
+plot(demstd)
+
+```

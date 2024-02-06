@@ -1,5 +1,6 @@
 ---
 title: "testex"
+engine: knitr
 filters:
  - webr
 ---

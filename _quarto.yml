@@ -2,6 +2,7 @@ project:
   title: "geostat_ex"
   output-dir: "./docs"
   execute-dir: project
+  
 
 editor: visual
 
@@ -22,6 +23,6 @@ format:
       sidebar-width: 0px
       margin-width: 0px
       body-width: 2000px
-      
+
 webr: 
   show-startup-message: false    # Disable displaying status of webR initialization
