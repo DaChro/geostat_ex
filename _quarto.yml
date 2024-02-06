@@ -17,4 +17,7 @@ format:
     code-fold: false
     smooth-scroll: true
     toc: false
-    page-layout: custom
+    grid: 
+      sidebar-width: 0px
+      margin-width: 0px
+      body-width: 2000px

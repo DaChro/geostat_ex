@@ -200,7 +200,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"code":"#rzeuge Vektor mit allen möglichen Ergebnissen,\n#also allen möglichen Anzahlen an gewürfelten Sechsen \nx = \n\n#berechne die Wahrscheinlichkeiten für die möglichen Ergebnisse\n# nutze dafür dbinom() und ergänze die Größe des Experimentes (size) und die Erfolgswahrscheinlichkeit (prob)\ny = dbinom(x, size =, prob = )\n\n#erstelle einen einfachen Plot zur Visualisierung\nplot(x, y, ylim = c(0, 1),  type = \"h\")\n","options":{"warning":"true","results":"markup","context":"interactive","classes":"","out-width":"700px","comment":"","output":"true","message":"true","autorun":"false","fig-cap":"","label":"unnamed-chunk-1","dpi":72,"fig-width":7,"fig-height":5,"out-height":""}}];
+globalThis.qwebrCellDetails = [{"options":{"context":"interactive","results":"markup","out-width":"700px","classes":"","output":"true","fig-height":5,"warning":"true","fig-width":7,"message":"true","autorun":"false","dpi":72,"comment":"","fig-cap":"","label":"unnamed-chunk-1","out-height":""},"id":1,"code":"#erzeuge Vektor mit allen möglichen Ergebnissen,\n#also allen möglichen Anzahlen an gewürfelten Sechsen \nx = \n\n#berechne die Wahrscheinlichkeiten für die möglichen Ergebnisse\n# nutze dafür dbinom() und ergänze die Größe des Experimentes (size) und die Erfolgswahrscheinlichkeit (prob)\ny = dbinom(x, size =, prob = )\n\n#erstelle einen einfachen Plot zur Visualisierung\nplot(x, y, ylim = c(0, 1),  type = \"h\")\n"}];
 
 </script>
 <script type="module">
@@ -923,7 +923,9 @@ globalThis.qwebrExecuteCode = async function (
 
 <body class="fullcontent">
 
-<div class="page-layout-custom">  
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
 <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/loader.js"></script>
 <script type="module" id="qwebr-monaco-editor-init">
 
@@ -1104,7 +1106,8 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 
-
+</main>
+<!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -1492,7 +1495,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-</div> <!-- /container fluid -->
+</div> <!-- /content -->
 <script type="module">
 // Handle cell initialization initialization
 qwebrCellDetails.map(

@@ -7,7 +7,7 @@ filters:
 
 
 ```{webr-r}
-#rzeuge Vektor mit allen möglichen Ergebnissen,
+#erzeuge Vektor mit allen möglichen Ergebnissen,
 #also allen möglichen Anzahlen an gewürfelten Sechsen 
 x = 
 
