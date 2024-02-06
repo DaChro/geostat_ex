@@ -5,7 +5,7 @@ project:
 
 editor: visual
 
-number-sections: true
+number-sections: false
 highlight-style: tango
 theme: [yeti, theme.scss]
 css: style.css
@@ -14,9 +14,7 @@ code-block-border-left: "#7AB629"
 
 format: 
   html:
-    
     code-fold: false
     smooth-scroll: true
-    toc: true
-    toc-location: left
-    toc-depth: 4
+    toc: false
+    page-layout: custom

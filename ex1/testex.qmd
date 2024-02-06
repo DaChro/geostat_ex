@@ -3,17 +3,14 @@ title: "testex"
 filters:
  - webr
 ---
-  
+
 ## Quarto
-  
+
 Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
 
 ```{webr-r}
 1 + 1
 ```
-
-
-
 
 ```{webr-r}
 a <- 5/(5+345)
@@ -27,9 +24,6 @@ c
 (a+b)/c # einfacher und lesbarer durch Nutzung von Variablen
 ```
 
-
-
-
 ```{webr-r}
 download.file(
   'https://raw.githubusercontent.com/DaChro/geostat_ex/main/data/students.rdata',
@@ -38,7 +32,3 @@ download.file(
 load("students.rdata")
 str(students)
 ```
-
-
-
-
