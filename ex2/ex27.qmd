@@ -1,0 +1,24 @@
+---
+title: ""
+filters:
+ - webr
+---
+
+
+
+```{webr-r}
+#erzeuge Vektor mit allen möglichen Ergebnissen,
+#also allen möglichen Anzahlen an gewürfelten Sechsen 
+x = 
+
+#berechne die Wahrscheinlichkeiten für die möglichen Ergebnisse
+# nutze dafür dbinom() und ergänze die Größe des Experimentes (size) und die Erfolgswahrscheinlichkeit (prob)
+y = dbinom(x, size =, prob = )
+
+#erstelle einen einfachen Plot zur Visualisierung
+plot(x, y, ylim = c(0, 1),  type = "h")
+
+
+```
+
+
