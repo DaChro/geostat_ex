@@ -24,7 +24,6 @@ load("sic97.RData")
 
 ```
 
-Der Befehl, den ihr für die Erstellung von räumlichen Stichproben (Punkte, die nach der jeweiligen Samplingmethode im Untersuchungsraum verteilt werden) benötigt, ist spsample. Diesem könnt ihr u.a. die im folgenden Befehl aufgeführten drei Argumente übergeben: `spsample(x,n,type)`. Hierbei ist `x` das räumliche Objekt innerhalb dessen ihr samplen wollt, `n` die Anzahl der Punkte, die ihr zufällig bestimmen wollt, und `type` die gewünschte Samplingmethode. Schaut euch die Hilfe zu dem Befehl an, um mehr über die verfügbaren Methoden zu herauszufinden
 
 ```{webr-r}
 library(sp)
