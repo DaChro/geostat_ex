@@ -1,0 +1,62 @@
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+
+
+---
+
+
+```{webr-r}
+
+#| context: setup
+
+webr::install("sp")
+
+
+# Download a dataset
+download.file(
+  'https://raw.githubusercontent.com/DaChro/geostat_ex/main/data/sic97.RData',
+  'sic97.RData'
+)
+load("sic97.RData")
+
+```
+
+
+```{webr-r}
+library(sp) 
+
+# Das folgende Beispiel fasst die obigen Hinweise für die 
+# Grundgesamtheit (das ganze Höhenmodell) zusammen:
+
+# Erstelle eine Histogramm (ohne Plotten) und speichere es in der Variable h1.
+h1 <- hist(demstd$band1, breaks = 20, plot = FALSE) 
+# Ersetze die Dichte mit der selbst berechneten relativen Häufigkeit.
+h1$density <- h1$counts / length(demstd$band1)  
+# Plotte das Ergbebnis.
+plot(h1, freq = FALSE, xlim = c(0, 5000), main = "Population", xlab = "Elevation(m)", ylab = "Relative Frequency") 
+
+```
+
+Ergänze nun im folgenden Codeblock die fehlenden Werte und Befehle, um ein Histogramm einer Stichprobe zu plotten. Vergleiche dann die beiden Histogramme.
+
+```{webr-r}
+# Ziehe nun erneut eine geeignete räumliche Stichprobe (vgl. vorherige Aufgabe)
+pts1 = spsample()
+
+# Nutze den Befehl 'over()', um an den so bestimmten Positionen
+# die Höhenwerte zu extrahieren. 
+dem.smpl.regular = over()
+
+# Verfahre nun so wie mit der Grundgesamtheit im Beispiel oben.
+# Ergänze dafür den Code entsprechend.
+h2 = 
+h2$density =     
+plot()
+
+```
+
+
+

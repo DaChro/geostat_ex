@@ -32,7 +32,7 @@ library(sp)
 # Ergänze dafür die fehlenden Argumente im untenstehenden Befehl.
 pts1 = spsample(demstd, n = , type = )
 
-# Mit dem Befehl points() kannst du die erstellten Punkte einem zuvor 
+# Mit dem Befehl 'points()' kannst du die erstellten Punkte einem zuvor 
 # erstellten räumlichen Plot wie etwa dem Höhenmodell hinzufügen.
 # Mit den Argumenten 'col' und 'pch' kannst du die Farbe und Form der Symbole beeinflussen.
 plot(demstd)

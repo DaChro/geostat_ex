@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ex41</title>
+<title>ex42</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,16 +23,16 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="ex41_files/libs/clipboard/clipboard.min.js"></script>
-<script src="ex41_files/libs/quarto-html/quarto.js"></script>
-<script src="ex41_files/libs/quarto-html/popper.min.js"></script>
-<script src="ex41_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="ex41_files/libs/quarto-html/anchor.min.js"></script>
-<link href="ex41_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="ex41_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="ex41_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="ex41_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="ex41_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="ex42_files/libs/clipboard/clipboard.min.js"></script>
+<script src="ex42_files/libs/quarto-html/quarto.js"></script>
+<script src="ex42_files/libs/quarto-html/popper.min.js"></script>
+<script src="ex42_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="ex42_files/libs/quarto-html/anchor.min.js"></script>
+<link href="ex42_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="ex42_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="ex42_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="ex42_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="ex42_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <style>html{ scroll-behavior: smooth; }</style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/editor/editor.main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -200,7 +200,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"\n\nwebr::install(\"sp\")\n\n\n# Download a dataset\ndownload.file(\n  'https://raw.githubusercontent.com/DaChro/geostat_ex/main/data/sic97.RData',\n  'sic97.RData'\n)\nload(\"sic97.RData\")","id":1,"options":{"fig-height":5,"label":"unnamed-chunk-1","results":"markup","classes":"","comment":"","message":"true","dpi":72,"fig-cap":"","output":"true","warning":"true","out-width":"700px","context":"setup","autorun":"true","out-height":"","fig-width":7}},{"code":"library(sp)\n\n# Erstelle die räumliche Stichprobe mit dem Befehl 'spsample()'\n# Ergänze dafür die fehlenden Argumente im untenstehenden Befehl.\npts1 = spsample(demstd, n = , type = )\n\n# Mit dem Befehl 'points()' kannst du die erstellten Punkte einem zuvor \n# erstellten räumlichen Plot wie etwa dem Höhenmodell hinzufügen.\n# Mit den Argumenten 'col' und 'pch' kannst du die Farbe und Form der Symbole beeinflussen.\nplot(demstd)\npoints(pts1, col = \"white\", pch = 3)\n","id":2,"options":{"fig-height":5,"label":"unnamed-chunk-2","results":"markup","classes":"","comment":"","message":"true","dpi":72,"fig-cap":"","output":"true","warning":"true","out-width":"700px","context":"interactive","autorun":"false","out-height":"","fig-width":7}}];
+globalThis.qwebrCellDetails = [{"id":1,"options":{"fig-height":5,"out-width":"700px","context":"setup","comment":"","fig-width":7,"label":"unnamed-chunk-1","message":"true","fig-cap":"","results":"markup","warning":"true","out-height":"","classes":"","dpi":72,"autorun":"true","output":"true"},"code":"\n\nwebr::install(\"sp\")\n\n\n# Download a dataset\ndownload.file(\n  'https://raw.githubusercontent.com/DaChro/geostat_ex/main/data/sic97.RData',\n  'sic97.RData'\n)\nload(\"sic97.RData\")"},{"id":2,"options":{"fig-height":5,"out-width":"700px","context":"interactive","comment":"","fig-width":7,"label":"unnamed-chunk-2","message":"true","fig-cap":"","results":"markup","warning":"true","out-height":"","classes":"","dpi":72,"autorun":"false","output":"true"},"code":"library(sp) \n\n# Das folgende Beispiel fasst die obigen Hinweise für die \n# Grundgesamtheit (das ganze Höhenmodell) zusammen:\n\n# Erstelle eine Histogramm (ohne Plotten) und speichere es in der Variable h1.\nh1 <- hist(demstd$band1, breaks = 20, plot = FALSE) \n# Ersetze die Dichte mit der selbst berechneten relativen Häufigkeit.\nh1$density <- h1$counts / length(demstd$band1)  \n# Plotte das Ergbebnis.\nplot(h1, freq = FALSE, xlim = c(0, 5000), main = \"Population\", xlab = \"Elevation(m)\", ylab = \"Relative Frequency\") "},{"id":3,"options":{"fig-height":5,"out-width":"700px","context":"interactive","comment":"","fig-width":7,"label":"unnamed-chunk-3","message":"true","fig-cap":"","results":"markup","warning":"true","out-height":"","classes":"","dpi":72,"autorun":"false","output":"true"},"code":"# Ziehe nun erneut eine geeignete räumliche Stichprobe (vgl. vorherige Aufgabe)\npts1 = spsample()\n\n# Nutze den Befehl 'over()', um an den so bestimmten Positionen\n# die Höhenwerte zu extrahieren. \ndem.smpl.regular = over()\n\n# Verfahre nun so wie mit der Grundgesamtheit im Beispiel oben.\n# Ergänze dafür den Code entsprechend.\nh2 = \nh2$density =     \nplot()"}];
 
 </script>
 <script type="module">
@@ -1107,6 +1107,9 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Ergänze nun im folgenden Codeblock die fehlenden Werte und Befehle, um ein Histogramm einer Stichprobe zu plotten. Vergleiche dann die beiden Histogramme.</p>
+<div id="qwebr-insertion-location-3"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 
 </main>
 <!-- /main column -->
@@ -1614,5 +1617,5 @@ qwebrInstance.then(
 
 
 
-<script src="ex41_files/libs/quarto-html/zenscroll-min.js"></script>
+<script src="ex42_files/libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
