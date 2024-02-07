@@ -15,6 +15,7 @@ code-block-border-left: "#7AB629"
 
 format: 
   html:
+    mainfont: "calibri"
     backgroundcolor: "#eff9fc"
     code-fold: true
     smooth-scroll: true
