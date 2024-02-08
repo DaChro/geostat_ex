@@ -39,12 +39,14 @@ h1$density <- h1$counts / length(demstd$band1)
 plot(h1, freq = FALSE, xlim = c(0, 5000), main = "Population", xlab = "Elevation(m)", ylab = "Relative Frequency") 
 
 
+# Erstelle nun ein Histogramm einer Stichprobe:
+
 # Ziehe nun erneut eine geeignete räumliche Stichprobe (vgl. vorherige Aufgabe)
-pts1 = spsample()
+smpl_pts = spsample()
 
 # Nutze den Befehl 'over()', um an den so bestimmten Positionen
 # die Höhenwerte zu extrahieren. 
-dem.smpl.regular = over()
+dem_smpl = over()
 
 # Verfahre nun so wie mit der Grundgesamtheit im Beispiel oben.
 # Ergänze dafür den Code entsprechend.
