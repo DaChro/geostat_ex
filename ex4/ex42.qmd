@@ -38,11 +38,7 @@ h1$density <- h1$counts / length(demstd$band1)
 # Plotte das Ergbebnis.
 plot(h1, freq = FALSE, xlim = c(0, 5000), main = "Population", xlab = "Elevation(m)", ylab = "Relative Frequency") 
 
-```
 
-Ergänze nun im folgenden Codeblock die fehlenden Werte und Befehle, um ein Histogramm einer Stichprobe zu plotten. Vergleiche dann die beiden Histogramme.
-
-```{webr-r}
 # Ziehe nun erneut eine geeignete räumliche Stichprobe (vgl. vorherige Aufgabe)
 pts1 = spsample()
 
