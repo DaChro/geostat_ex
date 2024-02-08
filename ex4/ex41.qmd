@@ -29,7 +29,7 @@ load("sic97.RData")
 library(sp)
 
 # Erstelle die räumliche Stichprobe mit dem Befehl 'spsample()'
-# Ergänze dafür die fehlenden Argumente im untenstehenden Befehl.
+# Ergänze dafür die Größe der Stichptobe 'n' und das Stichprobendesign 'type'.
 pts1 = spsample(demstd, n = , type = )
 
 # Mit dem Befehl 'points()' kannst du die erstellten Punkte einem 
