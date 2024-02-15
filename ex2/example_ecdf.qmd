@@ -1,0 +1,20 @@
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+---
+
+
+
+
+```{webr-r}
+#Wir erstellen einen Vektor mit 10 Werten
+smpl <- c(90, 85, 65, 78, 45, 89, 65, 35, 45, 78)
+# Wir plotten die empirische (kumulative) Verteilungsfunktion
+plot.ecdf(smpl, verticals = TRUE)
+# Wir fügen Linien zur Visualisierung des Beispiels für den Wert 78 hinzu
+abline(h=.7, col = "gray")
+abline(v=78, col = "gray")
+
+```
