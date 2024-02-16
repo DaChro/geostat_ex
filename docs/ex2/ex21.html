@@ -22,7 +22,12 @@ ul.task-list li input[type="checkbox"] {
 }
 </style>
 
-
+<script>
+function resize() {
+  var height = document.getElementsByTagName("html")[0].scrollHeight;
+  window.parent.postMessage(["setHeight", height], "*"); 
+}
+</script>
 <script src="ex21_files/libs/clipboard/clipboard.min.js"></script>
 <script src="ex21_files/libs/quarto-html/quarto.js"></script>
 <script src="ex21_files/libs/quarto-html/popper.min.js"></script>
