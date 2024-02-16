@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ex42</title>
+<title>ex21</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,16 +23,16 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="ex42_files/libs/clipboard/clipboard.min.js"></script>
-<script src="ex42_files/libs/quarto-html/quarto.js"></script>
-<script src="ex42_files/libs/quarto-html/popper.min.js"></script>
-<script src="ex42_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="ex42_files/libs/quarto-html/anchor.min.js"></script>
-<link href="ex42_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="ex42_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="ex42_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="ex42_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="ex42_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="ex21_files/libs/clipboard/clipboard.min.js"></script>
+<script src="ex21_files/libs/quarto-html/quarto.js"></script>
+<script src="ex21_files/libs/quarto-html/popper.min.js"></script>
+<script src="ex21_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="ex21_files/libs/quarto-html/anchor.min.js"></script>
+<link href="ex21_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="ex21_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="ex21_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="ex21_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="ex21_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <style>html{ scroll-behavior: smooth; }</style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/editor/editor.main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -200,7 +200,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"options":{"comment":"","context":"setup","autorun":"true","message":"true","label":"unnamed-chunk-1","out-width":"700px","dpi":72,"output":"true","out-height":"","results":"markup","fig-height":5,"classes":"","fig-cap":"","fig-width":7,"warning":"true"},"code":"\n\nwebr::install(\"sp\")\n\n\n# Download a dataset\ndownload.file(\n  'https://raw.githubusercontent.com/DaChro/geostat_ex/main/data/sic97.RData',\n  'sic97.RData'\n)\nload(\"sic97.RData\")"},{"id":2,"options":{"comment":"","context":"interactive","autorun":"false","message":"true","label":"unnamed-chunk-2","out-width":"700px","dpi":72,"output":"true","out-height":"","results":"markup","fig-height":5,"classes":"","fig-cap":"","fig-width":7,"warning":"true"},"code":"library(sp) \n\n## Das folgende Beispiel fasst die obigen Hinweise für die \n## Grundgesamtheit (das ganze Höhenmodell) zusammen:\n\n# Wir erstellen ein Histogramm (ohne Plotten) und speichern es in der Variable h1.\nh1 <- hist(demstd$band1, breaks = 20, plot = FALSE) \n# Wir ersetzen die Dichte mit der selbstberechneten relativen Häufigkeit.\nh1$density <- h1$counts / length(demstd$band1)  \n# Wir plotten das Ergbebnis. Dabei setzen wir freq = FLASE.\nplot(h1, freq = FALSE, xlim = c(0, 5000), main = \"Population\", xlab = \"Elevation(m)\", ylab = \"Relative Frequency\") \n\n\n## Erstelle nun ein Histogramm einer Stichprobe:\n\n# Ziehe nun erneut eine geeignete räumliche Stichprobe (vgl. vorherige Aufgabe).\nsmpl_pts = spsample()\n\n# Nutze den Befehl 'over()', um an den so bestimmten Positionen\n# die Höhenwerte zu extrahieren.\ndem_smpl = over()\n\n# Verfahre nun so wie mit der Grundgesamtheit im Beispiel oben.\n# Ergänze dafür den Code entsprechend.\nh2 = \nh2$density =     \nplot()"}];
+globalThis.qwebrCellDetails = [{"id":1,"code":"\n\n# Download a dataset\ndownload.file(\n  'https://raw.githubusercontent.com/DaChro/geostat_ex/main/data/students.rdata',\n  'students.rdata'\n)\nload(\"students.rdata\")","options":{"classes":"","dpi":72,"results":"markup","context":"setup","fig-cap":"","output":"true","label":"unnamed-chunk-1","message":"true","fig-width":7,"warning":"true","fig-height":5,"comment":"","autorun":"true","out-width":"700px","out-height":""}},{"id":2,"code":"\nhist()  # Häufigkeiten\n\nhist()  # Dichten","options":{"classes":"","dpi":72,"results":"markup","context":"interactive","fig-cap":"","output":"true","label":"unnamed-chunk-2","message":"true","fig-width":7,"warning":"true","fig-height":5,"comment":"","autorun":"false","out-width":"700px","out-height":""}}];
 
 </script>
 <script type="module">
@@ -1614,5 +1614,5 @@ qwebrInstance.then(
 
 
 
-<script src="ex42_files/libs/quarto-html/zenscroll-min.js"></script>
+<script src="ex21_files/libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

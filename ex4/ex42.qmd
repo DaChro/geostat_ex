@@ -27,25 +27,25 @@ library(sp)
 ## Das folgende Beispiel fasst die obigen Hinweise für die 
 ## Grundgesamtheit (das ganze Höhenmodell) zusammen:
 
-# Wir erstellen ein Histogramm (ohne Plotten) und speichere es in der Variable h1.
+# Wir erstellen ein Histogramm (ohne Plotten) und speichern es in der Variable h1.
 h1 <- hist(demstd$band1, breaks = 20, plot = FALSE) 
-# Wir ersetzen die Dichte mit der selbst berechneten relativen Häufigkeit.
+# Wir ersetzen die Dichte mit der selbstberechneten relativen Häufigkeit.
 h1$density <- h1$counts / length(demstd$band1)  
-# Wir plotten das Ergbebnis.
+# Wir plotten das Ergbebnis. Dabei setzen wir freq = FLASE.
 plot(h1, freq = FALSE, xlim = c(0, 5000), main = "Population", xlab = "Elevation(m)", ylab = "Relative Frequency") 
 
 
 ## Erstelle nun ein Histogramm einer Stichprobe:
 
-# Ziehe nun erneut eine geeignete räumliche Stichprobe (vgl. vorherige Aufgabe)
+# Ziehe nun erneut eine geeignete räumliche Stichprobe (vgl. vorherige Aufgabe).
 smpl_pts = spsample()
 
 # Nutze den Befehl 'over()', um an den so bestimmten Positionen
-# die Höhenwerte zu extrahieren
+# die Höhenwerte zu extrahieren.
 dem_smpl = over()
 
 # Verfahre nun so wie mit der Grundgesamtheit im Beispiel oben.
-# Ergänze dafür den Code entsprechend
+# Ergänze dafür den Code entsprechend.
 h2 = 
 h2$density =     
 plot()
