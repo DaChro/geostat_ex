@@ -21,6 +21,8 @@ load("students.rdata")
 ```
 
 ```{webr-r}
+#| out-width: 400px
+#| out-height: 300px
 
 hist()  # Häufigkeiten
 
