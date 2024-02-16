@@ -28,8 +28,8 @@ function resize() {
   var height = document.getElementsByTagName("html")[0].scrollHeight;
   window.parent.postMessage(["setHeight", height], "*"); 
 }
+setInterval(resize,1000);
 </script>
-<script>setInterval(resize,1000);</script>
 <script src="ex21_files/libs/clipboard/clipboard.min.js"></script>
 <script src="ex21_files/libs/quarto-html/quarto.js"></script>
 <script src="ex21_files/libs/quarto-html/popper.min.js"></script>
