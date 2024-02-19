@@ -3,8 +3,6 @@ title: ""
 engine: knitr
 filters:
  - webr
-
-
 ---
 
 ```{webr-r}
