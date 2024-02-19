@@ -1,0 +1,29 @@
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+
+
+---
+
+```{webr-r}
+
+#| context: setup
+
+# Download a dataset
+download.file(
+  'https://raw.githubusercontent.com/DaChro/geostat_ex/main/data/students.rdata',
+  'students.rdata'
+)
+load("students.rdata")
+
+```
+
+```{webr-r}
+#| out-width: 500px
+#| out-height: 450px
+# Ergänze die Variable, für welche die ecdf gezeichnet werden soll.
+
+plot.ecdf(  ,verticals = TRUE)
+```
