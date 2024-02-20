@@ -26,6 +26,7 @@ load("students.rdata")
 # Für 'y' muss dabei die zu untersuchende Variable gewählt werden,
 # für 'grp' die kategorische Variable, nach der unterschieden werden soll,
 # und für 'data' der Datensatz, aus dem beide Variablen stammen.
+# Der Befehl kann auch genutzt werden, um einen Boxplot ohne Unterscheidung nach Geschlecht zu erstellen.
 boxplot(y ~ grp, data)
 ```
 
