@@ -21,7 +21,6 @@ load("students.rdata")
 ```{webr-r}
 #| out-width: 70%
 #| out-height: 70%
-
 # Wir plotten erneut die emp. Verteilungsfunktion.
 plot.ecdf(students$Length, main = "Empirische Verteilungfunktion", xlab = "students$Length")
 

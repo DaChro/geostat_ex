@@ -1,0 +1,32 @@
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+---
+
+```{webr-r}
+
+#| context: setup
+
+# Download a dataset
+download.file(
+  'https://raw.githubusercontent.com/DaChro/geostat_ex/main/data/students.rdata',
+  'students.rdata'
+)
+load("students.rdata")
+
+```
+
+```{webr-r}
+#| out-width: 70%
+#| out-height: 70%
+# Der folgende Befehl zeigt die Syntax von 'boxplot()' mit generischen Argumenten.
+# Setze an ihrer Stelle die richtigen Argumente ein, um den Boxplot für unsere Fragestellung zu erstellen.
+# Für 'y' muss dabei die zu untersuchende Variable gewählt werden,
+# für 'grp' die kategorische Variable, nach der unterschieden werden soll,
+# und für 'data' der Datensatz, aus dem beide Variablen stammen.
+boxplot(y ~ grp, data)
+```
+
+
