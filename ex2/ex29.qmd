@@ -9,6 +9,8 @@ filters:
 
 
 ```{webr-r}
+# Mit folgendem Befehl kannst du herausfinden, welche Standard-Verteilungen 
+# noch angeboten werden und wie die jeweiligen R-Funktionen dazu heißen.
 ?distributions
 
 ```
