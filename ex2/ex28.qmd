@@ -1,0 +1,26 @@
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+
+
+---
+
+
+```{webr-r}
+# Erzeuge 10, 100, 1000 und 10000 zufällige Realisierungen.
+exp_10 = rbinom()
+exp_100 = rbinom()
+exp_1000 = rbinom()
+exp_10000 = rbinom()
+
+# Berechne nun jeweils Mittelwert und Standardabweichung z.B. mit:
+c(mean(exp10),sd(exp_10))
+
+
+# Berechne dann die theoretischen charakteristischen Werte und 
+# vergleiche sie mit den empirischen Werten.
+
+
+```
