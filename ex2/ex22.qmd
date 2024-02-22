@@ -34,6 +34,7 @@ hist(students$Length,plot = FALSE)$breaks
 
 
 # Auf ähnliche Weise kann der Flächeninhalt im Dichte-Histogramm berechnet werden.
+# Dafür muss auch die Klassenbreite berücksichtigt werden.
 
 
 ```

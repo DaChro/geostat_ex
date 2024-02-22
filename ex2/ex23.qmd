@@ -22,6 +22,5 @@ load("students.rdata")
 #| out-width: 70%
 #| out-height: 70%
 # Ergänze die Variable, für welche die ecdf gezeichnet werden soll.
-
 plot.ecdf(  ,verticals = TRUE)
 ```

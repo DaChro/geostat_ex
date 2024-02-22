@@ -24,9 +24,9 @@ load("students.rdata")
 # Wir plotten erneut die emp. Verteilungsfunktion.
 plot.ecdf(students$Length, main = "Empirische Verteilungfunktion", xlab = "students$Length")
 
-# Füge mit abline() Linien hinzu, um die visuelle Bestimmung zu vereinfachen.
-# Nutze dafür sinnvolle Werte für 'v' und 'h'.
-
+# Mit abline() lassen sich bei Bedarf horizontale bzw. vertikale 
+# Linien zu einem Plot hinzufügen, um die visuelle Analyse zu vereinfachen.
+# Die Parameter 'v' oder 'h' bestimmen dabei den Wert auf der x- bzw. y-Achse.
 abline(v =  ,col = "orange")
 abline(h =  ,col = "orange")
 ```
