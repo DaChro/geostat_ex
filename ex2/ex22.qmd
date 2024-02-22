@@ -1,0 +1,40 @@
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+---
+
+```{webr-r}
+
+#| context: setup
+
+# Download a dataset
+download.file(
+  'https://raw.githubusercontent.com/DaChro/geostat_ex/main/data/students.rdata',
+  'students.rdata'
+)
+load("students.rdata")
+
+```
+
+```{webr-r}
+#| out-width: 70%
+#| out-height: 70%
+# Um die genauen Höhen/Breiten der Balken herauszubekommen, 
+# ist die textuelle Ausgabe des Histogramms nützlich.
+hist(students$Length,plot = FALSE)
+
+# Über den $-Operator können wir auf einzelne Komponenten der Ausgabe zugreifen, 
+# z.B. die Klassengrenzen.
+hist(students$Length,plot = FALSE)$breaks
+
+# Um die Summe aller Balkenhöhen zu berechnen, 
+# finde die entsprechende Komponente der Ausgabe und nutze 'sum()'.
+
+
+# Auf ähnliche Weise kann der Flächeninhalt im Dichte-Histogramm berechnet werden.
+
+
+```
+
