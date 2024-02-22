@@ -23,7 +23,6 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="example_ecdf_files/libs/clipboard/clipboard.min.js"></script>
 <script src="example_ecdf_files/libs/quarto-html/quarto.js"></script>
 <script src="example_ecdf_files/libs/quarto-html/popper.min.js"></script>
 <script src="example_ecdf_files/libs/quarto-html/tippy.umd.min.js"></script>
@@ -200,7 +199,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"code":"#Wir erstellen einen Vektor mit 10 Werten\nsmpl <- c(90, 85, 65, 78, 45, 89, 65, 35, 45, 78)\n# Wir plotten die empirische (kumulative) Verteilungsfunktion\nplot.ecdf(smpl, verticals = TRUE)\n# Wir fügen Linien zur Visualisierung des Beispiels für den Wert 78 hinzu\nabline(h=.7, col = \"gray\")\nabline(v=78, col = \"gray\")","options":{"message":"true","fig-height":5,"out-width":"700px","out-height":"","fig-width":7,"output":"true","results":"markup","context":"interactive","label":"unnamed-chunk-1","warning":"true","dpi":72,"fig-cap":"","classes":"","autorun":"false","comment":""}}];
+globalThis.qwebrCellDetails = [{"code":"#Wir erstellen einen Vektor mit 10 Werten\nsmpl <- c(90, 85, 65, 78, 45, 89, 65, 35, 45, 78)\n# Wir plotten die empirische (kumulative) Verteilungsfunktion\nplot.ecdf(smpl, verticals = TRUE)\n# Wir fügen Linien zur Visualisierung des Beispiels für den Wert 78 hinzu\nabline(h=.7, col = \"gray\")\nabline(v=78, col = \"gray\")","options":{"autorun":"false","warning":"true","out-width":"700px","fig-height":5,"results":"markup","classes":"","label":"unnamed-chunk-1","comment":"","context":"interactive","dpi":72,"fig-width":7,"fig-cap":"","message":"true","out-height":"","output":"true"},"id":1}];
 
 </script>
 <script type="module">
@@ -1135,58 +1134,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  });
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,

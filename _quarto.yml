@@ -18,7 +18,6 @@ format:
     mainfont: "calibri"
     backgroundcolor: "#eff9fc"
     code-fold: true
-    code-copy: false
     smooth-scroll: true
     toc: false
     grid: 
