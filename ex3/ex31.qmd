@@ -36,8 +36,8 @@ p.smaller.195 = pnorm(q = , mean = , sd = )
 p.taller.195 = 
 
 # Um die zweite Frage zu beantworten, bestimme zunächst alle Werte 
-# außerhalb des Intervalls (darüber und darunter) mit Hilfe der 
-# Operatoren '<' und '>'
+# außerhalb des gefragten Intervalls (darüber und darunter) mit Hilfe der 
+# Operatoren '<' und '>'.
 students.smaller.mu_minus_sd = students$Length < 
 students.taller.mu_plus_sd = 
 
