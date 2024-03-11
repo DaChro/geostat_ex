@@ -1,0 +1,55 @@
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+---
+
+```{webr-r}
+
+#| context: setup
+
+# Download a dataset
+download.file(
+  'https://raw.githubusercontent.com/DaChro/geostat_ex/main/data/students.rdata',
+  'students.rdata'
+)
+load("students.rdata")
+
+```
+
+```{webr-r}
+# Berechne zunächst den empirischen Mittelwert 
+# und die empirische Standardabweichung der Stichprobe. 
+mu.length = 
+sd.length =
+  
+# Mit 'pnorm()' kann man in einer Normalverteilung, die man über
+# Mittelwert und Standardabweichung definiert, die Wahrscheinlichkeit 
+# für kleinere Werte in dieser Verteilung bestimmen.
+# Verwende die oben bestimmten Werte für Mittelwert und Standardabweichung 
+# und bestimmte damit die Wahrscheinlichkeit für Werte kleiner als 195.
+p.smaller.195 = pnorm(q = , mean = , sd = )
+
+# Mit einem kleinen weiteren Schritt kann man dann die Wahrscheinlichkeit
+# für Werte größer 195 bestimmen.
+p.taller.195 = 
+
+# Um die zweite Frage zu beantworten, bestimme zunächst alle Werte 
+# außerhalb des Intervalls (darüber und darunter) mit Hilfe der 
+# Operatoren '<' und '>'
+students.smaller.mu_minus_sd = students$Length < 
+students.taller.mu_plus_sd = 
+
+# Bestimme dann die Anzahl der Werte außerhalb des Intervalls.
+# Da die obigen Abfragen für jeden Wert, der die jeweilige Bedingung erfüllt, 
+# 'TRUE' (1) ausgeben, kannst du hier einfach 'sum()' arbeiten.
+number.students.outside = 
+
+# Berechne hieraus den Anteil der Werte außerhalb und basierend darauf
+# den Anteil der Werte innerhalb des Intervalls
+fraction.students.outside =
+fraction.students.inside = 
+
+
+```
