@@ -43,7 +43,7 @@ students.taller.mu_plus_sd =
 
 # Bestimme dann die Anzahl der Werte außerhalb des Intervalls.
 # Da die obigen Abfragen für jeden Wert, der die jeweilige Bedingung erfüllt, 
-# 'TRUE' (1) ausgeben, kannst du hier einfach 'sum()' arbeiten.
+# 'TRUE' (also 1) ausgeben, kannst du hier einfach 'sum()' arbeiten.
 number.students.outside = 
 
 # Berechne hieraus den Anteil der Werte außerhalb und basierend darauf
