@@ -1,0 +1,33 @@
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+
+
+---
+
+```{webr-r}
+
+#| context: setup
+
+webr::install("sp")
+
+
+# Download a dataset
+download.file(
+  'https://raw.githubusercontent.com/DaChro/geostat_ex/main/data/studNoEx.rdata',
+  'studNoEx.rdata'
+)
+load("studNoEx.rdata")
+
+```
+
+```{webr-r}
+# Erzeuge eine Kreuztabelle der Häufigkeitein mit den beiden gefragten Variablen.
+xtabs(~Variable1 + Variable2, studNoEx)
+
+# Mit der richtigen Formal kannst du hieraus die bedingten Wahrscheinlichkeiten
+# berechnen.
+
+```
