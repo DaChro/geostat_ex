@@ -10,16 +10,17 @@ filters:
 
 
 ```{webr-r}
+# Der "iris" Datensatz ist ein Beispieldatensatz, der mit der Software
+# mitgeliefert wird. Er kann daher einfach mit 'data" geladen werden.
 data("iris")
 
-#Zunächst können wir uns die einzelnen Spezies aus dem 
-# Datensatz ziehen und als eigene data.frames speichern:
-
+#Z unächst können wir uns die einzelnen Spezies aus dem 
+# Datensatz ziehen und als eigene data.frames speichern.
 iris_setosa <- (iris[which(iris$Species=="setosa"),])
 iris_versicolor <-
 iris_virginica <- 
 
-# Die Korrelationen berechnen wir mit Hilfe des Befehls cor():
+# Die Korrelationen berechnen wir mit Hilfe des Befehls cor().
 cor()
 cor()
 cor()
