@@ -31,7 +31,7 @@ library(sp)
 m = 
 
 # Als 'sd' nehmt ihr den jeweiligen Standardfehler, den ihr für die
-# entsprechende Stichprobe berechnet.
+# entsprechende Stichprobe ähnlich wie in der vorherigen Aufgabe berechnet.
 se.100 =
 se.20 =
 
@@ -45,6 +45,7 @@ p1 = pnorm(400, m, se.100)
 
 # Auf ähnliche Weise könnt ihr die Wahrscheinlichkeiten für verschiedene 
 # Intervalle berechnen und diese kombinieren, um die Aufgabe zu lösen.
+
 
 
 ```
