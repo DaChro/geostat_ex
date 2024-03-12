@@ -1,0 +1,50 @@
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+---
+
+```{webr-r}
+
+#| context: setup
+
+webr::install("sp")
+
+
+# Download a dataset
+download.file(
+  'https://raw.githubusercontent.com/DaChro/geostat_ex/main/data/sic97.RData',
+  'sic97.RData'
+)
+load("sic97.RData")
+
+```
+
+```{webr-r}
+library(sp)
+
+# Ihr könnt ähnlich wie in Aufgabe 1 von Übung 3 vorgehen.
+# Ihr braucht also wieder den Befehl 'pnorm(q,mean,sd)', wobei ihr die 
+# Normalverteilung richtig definieren müsst.
+# Als 'mean' nehmt ihr den Mittelwert der Grundgesamtheit.
+m = 
+
+# Als 'sd' nehmt ihr den jeweiligen Standardfehler, den ihr für die
+# entsprechende Stichprobe berechnet.
+se.100 =
+se.20 =
+
+
+# Für 'q' setzt ihr die jeweiligen Intervallgrenzen ein, die
+# sich aus der Aufgabenstellung ergeben. Die Wahrscheinlichkeit
+# für Werte kleiner 400 bei einem Stichprobenumfang von 100
+# erhält man zum Beispiel über:
+  
+p1 = pnorm(400, m, se.100)
+
+# Auf ähnliche Weise könnt ihr die Wahrscheinlichkeiten für verschiedene 
+# Intervalle berechnen und diese kombinieren, um die Aufgabe zu lösen.
+
+
+```
