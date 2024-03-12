@@ -1,0 +1,36 @@
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+
+
+---
+
+```{webr-r}
+
+#| context: setup
+
+webr::install("sp")
+
+
+# Download a dataset
+download.file(
+  'https://raw.githubusercontent.com/DaChro/geostat_ex/main/data/students.rdata',
+  'students.rdata'
+)
+load("students.rdata")
+
+```
+
+```{webr-r}
+#| out-width: 70%
+#| out-height: 70%
+
+# Die Variable ali wurde in Übung 1 vor Aufgabe 8 berechnet, zur Erinnerung:
+students$ali <- ((students$Semester / 2) / students$Age) * 100
+
+# Schau dir die Funktionen qqnorm() und qqline() an, um die Aufgabe zu lösen.
+?qqnorm()
+
+```
