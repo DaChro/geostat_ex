@@ -30,4 +30,5 @@ xtabs(~Variable1 + Variable2, studNoEx)
 # Mit der richtigen Formal kannst du hieraus die bedingten Wahrscheinlichkeiten
 # berechnen.
 
+
 ```
