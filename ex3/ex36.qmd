@@ -11,7 +11,7 @@ filters:
 
 ```{webr-r}
 # Der "iris" Datensatz ist ein Beispieldatensatz, der mit der Software
-# mitgeliefert wird. Er kann daher einfach mit 'data" geladen werden.
+# mitgeliefert wird. Er kann daher einfach mit 'data()' geladen werden.
 data("iris")
 
 #Z unächst können wir uns die einzelnen Spezies aus dem 
