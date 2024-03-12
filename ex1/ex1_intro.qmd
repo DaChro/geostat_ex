@@ -1,0 +1,30 @@
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+
+
+---
+
+
+
+```{webr-r}
+
+# Wir laden den Datensatz 'iris'. Da dieser Datensatz bereits
+# mit der Software mitgeliefert wird, geht dies einfach über den Befehl 'data()'.
+data(iris) 
+
+# Wir erstellen ein subset der Daten, welches nur Zeilen 40 bis 60 enthält 
+# und speichern es in der Variable 'iris_sub'.
+iris_sub <- iris[40:60,] 
+
+# Wir lassen das in der Variable 'iris_sub' gespeicherte Objekt ausgeben, 
+# also die Zeilen 40 bis 60 des iris Datensatzes.
+iris_sub  
+
+```
+
+
+
+
