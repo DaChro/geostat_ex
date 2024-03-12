@@ -12,7 +12,8 @@ filters:
 ```{webr-r}
 
 # Wir laden den Datensatz 'iris'. Da dieser Datensatz bereits
-# mit der Software mitgeliefert wird, geht dies einfach über den Befehl 'data()'.
+# mit der Software mitgeliefert wird, geht dies einfach über 
+# den Befehl 'data()'.
 data(iris) 
 
 # Wir erstellen ein subset der Daten, welches nur Zeilen 40 bis 60 enthält 
