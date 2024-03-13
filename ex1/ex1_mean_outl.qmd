@@ -1,0 +1,58 @@
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+
+
+---
+
+```{webr-r}
+
+#| context: setup
+
+# Download a dataset
+download.file(
+  'https://raw.githubusercontent.com/DaChro/geostat_ex/main/data/students.rdata',
+  'students.rdata'
+)
+load("students.rdata")
+
+```
+
+```{webr-r}
+
+# Wir wählen zunächst nur die männlichen Studierenden aus und speichern 
+# sie in einem neuen Objekt.
+students.m <- students[students$Gender == "m", ]
+
+# Für diese Studierenden tragen wir in einem einfachen Plot die Variable 
+# 'Semester' gegen die Variable 'Age' ab. So können wir außergewöhnliche 
+# Werte visuell bestimmen.
+plot(x = students.m$Age, y = students.m$Semester)
+
+# Es gibt offenbar einige sehr hohe Werte bei 'Semester'. Wir vergleichen
+# Mittelwert und Median von 'Semester' der männlichen Studierenden:
+mean(students.m$Semester, na.rm = TRUE)
+median(students.m$Semester, na.rm = TRUE)
+
+
+# Ausreißer können manuell entfernt werden. Folgende Befehle entfernen 
+# Beobachtungen, bei denen die Semesterangaben größer oder gleich 10 Semester sind,
+# und berechnet im Anschluss den Mittelwert und Median des bereinigten Datensatzes:
+students.m.clean <- students.m[students.m$Semester < 10, ]
+mean(students.m.clean$Semester, na.rm = TRUE)
+median(students.m.clean$Semester, na.rm = TRUE)
+
+# Alternativ können auch getrimmte Mittelwerte betrachtet werden um Ausreißer zu beseitigen. 
+# Führe folgende Befehle aus und beachte, wie unterschiedliche Werte für 'trim' den 
+# resultierenden Mittelwert beeinflussen:
+mean(students.m$Semester, trim = 0.1, na.rm = TRUE)
+mean(students.m$Semester, trim = 0.3, na.rm = TRUE)
+mean(students.m$Semester, trim = 0.5, na.rm = TRUE)
+median(students.m$Semester, na.rm = TRUE)
+
+
+```
+
+
