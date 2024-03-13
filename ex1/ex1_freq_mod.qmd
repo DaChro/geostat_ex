@@ -1,0 +1,40 @@
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+
+
+---
+
+```{webr-r}
+
+#| context: setup
+
+# Download a dataset
+download.file(
+  'https://raw.githubusercontent.com/DaChro/geostat_ex/main/data/students.rdata',
+  'students.rdata'
+)
+load("students.rdata")
+
+```
+
+```{webr-r}
+
+# Der Befehl 'summary()' gibt eine Zusammenfassung eines Datensatzes aus, 
+# also v.a. statistische Kennwerte der enthaltenen Variablen.
+summary(students)
+
+# Der Befehl 'str()' liefert Informationen zur Struktur des Datensatzes.
+# Er gibt u.a. Auskunft über den Typ der enthaltenen Variablen.
+str(students)
+
+# "num" bedeutet, dass es sich um einen Vektor mit Zahlen handelt. 
+# "Factor" bedeutet, dass es sich um einen Faktor, also um die Repräsentation 
+# einer kategorialen Variable handelt. Hierbei werden dann u.a. auch noch 
+# die Anzahl der Kategorien ("levels") angezeigt.
+
+```
+
+
