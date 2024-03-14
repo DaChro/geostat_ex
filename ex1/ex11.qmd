@@ -1,0 +1,37 @@
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+
+
+---
+
+
+
+```{webr-r}
+
+# Zunächst laden wir wieder die Daten.
+data(iris) 
+
+# Erstelle das susbet mit den Zeilen 40 bis 60 wie bereits in der Einführung gezeigt.
+iris_sub <- 
+
+# Um auf einzelne Spalten des eines data.frame wie in diesem Beispiel zuzugreifen, 
+# kann der '$'-Operator verwendet werden, z.B.:
+iris_sub$Species
+
+  
+# Für die Beantwortung der ersten Fragen benötigen wir die Befehle 
+# 'mean()', 'sd()', 'median()' und 'quantile()'. Der Befehl 'quantile()' benötigt für die 
+# Beantwortung der entsprechenden Fragen auch ein Argument 'prob', 
+# welches das gewünschte Quantil spezifiziert.
+# So könnte z.B. das 0.20-Quantil der Variable Sepal.Width des iris_sub Datensatzes berechnet werden:  
+quantile(iris_sub$Sepal.Width, prob = 0.2)
+
+# Bestimme nun die in der Aufgabe gefragten Kennwerte.
+
+
+```
+
+
