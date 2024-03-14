@@ -1,0 +1,23 @@
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+
+
+---
+
+
+
+```{webr-r}
+# Zunächst laden wir wieder die Daten und bestimmen die Zeilen 40-60.
+data(iris) 
+iris_sub <- 
+
+# Benutze nun den Befehl 'summary()', um die Aufgabe zu lösen.
+
+
+```
+
+
+
