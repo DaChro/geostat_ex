@@ -10,7 +10,6 @@ filters:
 
 
 ```{webr-r}
-
 # Zunächst laden wir wieder die Daten.
 data(iris) 
 
