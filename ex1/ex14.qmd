@@ -22,6 +22,9 @@ load("students.rdata")
 ```
 
 ```{webr-r}
+#| out-width: 70%
+#| out-height: 70%
+
 # Histogramme können mit der Funktion 'hist()' ausgegeben werden. 
 hist(students$Age)
 
