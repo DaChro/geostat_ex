@@ -3,11 +3,7 @@ title: ""
 engine: knitr
 filters:
  - webr
-
-
 ---
-
-
 
 ```{webr-r}
 # Zunächst laden wir wieder die Daten.
@@ -32,5 +28,3 @@ quantile(iris_sub$Sepal.Width, prob = 0.2)
 
 
 ```
-
-
