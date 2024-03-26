@@ -1,0 +1,35 @@
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+---
+
+```{webr-r}
+
+#| context: setup
+
+# Download a dataset
+download.file(
+  'https://raw.githubusercontent.com/DaChro/geostat_ex/main/data/students.rdata',
+  'students.rdata'
+)
+load("students.rdata")
+
+```
+
+```{webr-r}
+# Wir Berechnen den Median der Variable 'Length' im 'students'-Datensatz.
+# Dabei entfernen wir eventuelle NA-Werte
+med <- median(students$Length, na.rm = TRUE)
+med # Ausgabe des Wertes
+
+# Wir berechenen die Quartile von 'Length'.
+# Dafür übergeben wie statt einer Zahl diesmal einen zuvor 
+# erstellten Vektor mit den gewünschten Werten.
+fracs <- c(0.25, 0.5, 0.75)
+quartiles <- quantile(students$Length, prob = fracs, na.rm = TRUE)
+quartiles # Ausgabe des Wertes
+```
+
+

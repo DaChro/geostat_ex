@@ -1,0 +1,39 @@
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+---
+
+```{webr-r}
+
+#| context: setup
+
+# Download a dataset
+download.file(
+  'https://raw.githubusercontent.com/DaChro/geostat_ex/main/data/students.rdata',
+  'students.rdata'
+)
+load("students.rdata")
+
+```
+
+```{webr-r}
+# Zunächste erstellen wir erneut die Variable 'ali'.
+students$ali <- ((students$Semester / 2) / students$Age) * 100
+
+# Zur Beantwortung der ersten Frage kann wiederum die Bestimmung eines Quantils
+# genutzt werden. 
+quantile()
+
+
+# Um zu bestimmen, wieviele Werte der gefragten Variablen es insgesamt (ohne NA-Werte) gibt, 
+# kann der folgende Befehl verwendet werden. 
+length(na.omit(students$ali))
+
+# Nutze diesen Befehl und versuche eine ähnliche Befehlskette wie bei 
+# Frage 2 dieser Übung, um die zweite Frage zu beantworten.
+
+
+
+```
