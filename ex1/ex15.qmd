@@ -19,7 +19,7 @@ load("students.rdata")
 ```
 
 ```{webr-r}
-# Zunächste erstellen wir erneut die Variable 'ali'.
+# Zunächst erstellen wir erneut die Variable 'ali'.
 students$ali <- ((students$Semester / 2) / students$Age) * 100
 
 # Zur Beantwortung der ersten Frage kann wiederum die Bestimmung eines Quantils
