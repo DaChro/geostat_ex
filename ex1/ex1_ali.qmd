@@ -1,0 +1,29 @@
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+---
+
+```{webr-r}
+
+#| context: setup
+
+# Download a dataset
+download.file(
+  'https://raw.githubusercontent.com/DaChro/geostat_ex/main/data/students.rdata',
+  'students.rdata'
+)
+load("students.rdata")
+
+```
+
+```{webr-r}
+# Wir berechnen den fiktiven ALI und speichern ihn in der Variable
+# 'ali' im 'students'-Datensatz.
+students$ali <- ((students$Semester / 2) / students$Age) * 100
+summary(students$ali) # Ausgabe einiger Kennwerte der neuen Variable
+```
+
+
+
