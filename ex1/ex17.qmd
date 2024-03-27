@@ -19,7 +19,9 @@ load("students.rdata")
 ```
 
 ```{webr-r}
-# Vewende die Funktion 'quantile' um die Quartile zu bestimmen und die Frage zu beantworten.
+# Vewende die Funktion 'quantile' um die Quartile zu bestimmen, die du brauchst, 
+# um die Frage zu beantworten.
+
 
 
 ```
