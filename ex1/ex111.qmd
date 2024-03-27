@@ -1,0 +1,42 @@
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+---
+
+```{webr-r}
+
+#| context: setup
+
+# Download a dataset
+download.file(
+  'https://raw.githubusercontent.com/DaChro/geostat_ex/main/data/students.rdata',
+  'students.rdata'
+)
+load("students.rdata")
+
+```
+
+```{webr-r}
+# Die untenstehenden Befehle sind teilweise verschachtelt bzw. bestehen aus 
+# Kombinationen von R-Funktionen, so wird z.B. mit
+ sqrt(sum(iris$Sepal.Width))
+# zunächst die Summe einer Zahlenreihe (hier Sepal.Width) gebildet und dann hieraus die Wurzel gezogen
+
+# Mit dem ? kann die Hilfe zu einer Funktion aufgerufen werden:
+?sum
+
+# Um die Aufgabe zu lösen, kann es hilfreich sein, die Befehle komplett und/oder die darin vorkommenden 
+# R-Funktionen einzeln einmal selbst hier oder in R auszuführen, um zu sehen, was dort jeweils passiert:
+
+#1
+m = sum(iris$Sepal.Length[40:60]) / 21
+m
+
+#2 ...
+
+
+```
+
+
