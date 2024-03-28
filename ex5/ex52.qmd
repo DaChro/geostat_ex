@@ -22,16 +22,16 @@ pm10 = read.csv("pm10.txt", header = T, sep = "")
 ```
 
 ```{webr-r}
-# Bestimme zunächst alle notwendigen Parameter zur Definition der Verteilung
+# Bestimme zunächst alle notwendigen Parameter zur Definition der Verteilung.
 
 m =
 s =
 n =
 SE =
 
-# Verfahre nun so wie in der vorherigen Aufgabe
+# Verfahre nun so wie in der vorherigen Aufgabe.
 # Da die Standardabweichung der Grundgesamtheit hier unbekannt ist, 
-# benutzen wir nicht die Quantile der Normalverteilung ('qnorm()'), sondern ?
+# benutzen wir nicht die Quantile der Normalverteilung ('qnorm()'), sondern ... ?
 
 KI_90 =
 KI_95 =
