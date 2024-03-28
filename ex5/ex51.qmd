@@ -1,0 +1,43 @@
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+---
+
+```{webr-r}
+
+#| context: setup
+
+webr::install("sp")
+
+
+# Download a dataset
+download.file(
+  'https://raw.githubusercontent.com/DaChro/geostat_ex/main/data/sic97.RData',
+  'sic97.RData'
+)
+load("sic97.RData")
+
+```
+
+```{webr-r}
+library(sp)
+
+# Wir erzeugen zunächst wieder eine Stichprobe und extrahieren die Höhenwerte
+dem.smpl.points = spsample(demstd, n = 60, type = "regular")
+dem.smpl.regular = over(dem.smpl.points, demstd)
+
+# Für die obigen Befehle muss zunächst wieder der Standardfehler SE berechnet 
+# und der Mittelwert der Stichprobe m bestimmt werden.
+m = 
+SE =
+
+# q1 bzw. q2 kann man der Aufgabenstellung entnehmen und dann alle 
+# Werte als Argumente in die in der Aufgabe vorgegebenen Befehle einsetzen.
+KI_90 = 
+KI_95 = 
+
+
+```
+
