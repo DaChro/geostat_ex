@@ -1,0 +1,42 @@
+
+
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+---
+
+```{webr-r}
+
+#| context: setup
+
+# Download a dataset
+download.file(
+  'https://raw.githubusercontent.com/DaChro/geostat_ex/main/data/pm10.txt',
+  'pm10.txt'
+)
+
+pm10 = read.csv("pm10.txt", header = T, sep = "")
+
+```
+
+```{webr-r}
+# Bestimme zunächst alle notwendigen Parameter zur Definition der Verteilung
+
+m =
+s =
+n =
+SE =
+
+# Verfahre nun so wie in der vorherigen Aufgabe
+# Da die Standardabweichung der Grundgesamtheit hier unbekannt ist, 
+# benutzen wir nicht die Quantile der Normalverteilung ('qnorm()'), sondern ?
+
+KI_90 =
+KI_95 =
+  
+KI_90_links =
+KI_95_links = 
+
+```
