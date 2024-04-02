@@ -1,0 +1,33 @@
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+---
+
+```{webr-r}
+
+#| context: setup
+
+# Download a dataset
+download.file(
+  'https://raw.githubusercontent.com/DaChro/geostat_ex/main/data/pm10.txt',
+  'pm10.txt'
+)
+
+pm10 = read.csv("pm10.txt", header = T, sep = "")
+
+```
+
+```{webr-r}
+# Setze die oben bestimmten Parameter als Argumente in die Funktion 
+# 'power.t.test()' ein, um die Aufgabe zu lösen.
+power.t.test()
+
+  
+
+
+```
+
+
+
