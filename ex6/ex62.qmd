@@ -1,0 +1,32 @@
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+---
+
+```{webr-r}
+
+#| context: setup
+
+# Download a dataset
+download.file(
+  'https://raw.githubusercontent.com/DaChro/geostat_ex/main/data/pm10.txt',
+  'pm10.txt'
+)
+
+pm10 = read.csv("pm10.txt", header = T, sep = "")
+
+```
+
+```{webr-r}
+# Um einen paarweisen t-Test durchzuführen, muss das Argument 'paired' auf TRUE gesetzt werden.
+# Vervollständige den Befehl und interpretiere die Ergebnisse um die Aufgabe zu lösen.
+t.test( .... , paired = TRUE)
+
+  
+
+
+```
+
+
