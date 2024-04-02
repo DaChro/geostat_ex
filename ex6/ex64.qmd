@@ -1,0 +1,32 @@
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+---
+
+```{webr-r}
+
+#| context: setup
+
+# Download a dataset
+download.file(
+  'https://raw.githubusercontent.com/DaChro/geostat_ex/main/data/pm10.txt',
+  'pm10.txt'
+)
+
+pm10 = read.csv("pm10.txt", header = T, sep = "")
+
+```
+
+```{webr-r}
+# Der Datensatz ist bereits geladen. 
+# Um die Eingabe der Formel zu erleichtern, ist es ggf. sinnvoll, die verschiedenen
+# Bestandteile einzeln zu berechnen und in Variablen zu speichern.
+
+  
+
+
+```
+
+
