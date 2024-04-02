@@ -22,7 +22,7 @@ pm10 = read.csv("pm10.txt", header = T, sep = "")
 ```{webr-r}
 # Für die zweite Frage zu beantworten, kannst du ihr ebenfalls die Funktion 'power.t.test()' verwenden. 
 # Gib hierbei aber die gewünschte Trennschärfe diesmal vor (Agrument 'power') und setze den stattdessen 
-# zu bestimmenden Parameter auf NULL.
+# zu bestimmenden Parameter auf 'NULL'.
 power.t.test()
 
   
