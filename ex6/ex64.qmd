@@ -20,7 +20,7 @@ pm10 = read.csv("pm10.txt", header = T, sep = "")
 ```
 
 ```{webr-r}
-# Der Datensatz ist bereits geladen. 
+# Der 'pm10'-Datensatz ist wie immer bereits geladen. 
 # Um die Eingabe der Formel zu erleichtern, ist es ggf. sinnvoll, die verschiedenen
 # Bestandteile einzeln zu berechnen und in Variablen zu speichern.
 
