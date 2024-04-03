@@ -1,0 +1,41 @@
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+---
+
+```{webr-r}
+
+#| context: setup
+
+# Download a dataset
+download.file(
+  'https://raw.githubusercontent.com/DaChro/geostat_ex/main/data/pm10.txt',
+  'pm10.txt'
+)
+
+pm10 = read.csv("pm10.txt", header = T, sep = "")
+
+```
+
+```{webr-r}
+# Zunächst erzeugen wir wie in der Aufgabe gefordert den data frame 'pm10.grouped'.
+pm10.grouped = data.frame(PM10 = c(pm10[[1]], pm10[[2]]), 
+              station = rep(c("VMUE", "VMSS"), 
+              each = length(pm10[[1]])))
+
+# Nun können wir die Funktion 'aov()' verwenden. Sezte dafür im untenstehenden
+# Befehl die richtigen drei Argumente ein, um die Spalten mit der abhängigen und der
+# kategorielen Variablen sowie den data frame, in welchem die Spalten zu finden sind,
+# zu definieren.
+test.result = aov(abhängigeVariable ~ kategorialeVariable, datensatz)
+
+# Eine alternative Form des Aufrufs wäre:
+test.result = aov(datensatz$abhängigeVariable ~ datensatz$kategorialeVariable)
+
+# Das Testergebis lassen wir uns dann zusammenfassen. Intepretere das Ergebnis,
+# um die Frage zu beantworten.
+summary(test.result)
+
+```
