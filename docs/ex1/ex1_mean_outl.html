@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.552">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -200,7 +200,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"\n\n# Download a dataset\ndownload.file(\n  'https://raw.githubusercontent.com/DaChro/geostat_ex/main/data/students.rdata',\n  'students.rdata'\n)\nload(\"students.rdata\")","id":1,"options":{"warning":"true","message":"true","classes":"","results":"markup","autorun":"true","context":"setup","output":"true","fig-height":5,"out-width":"700px","comment":"","out-height":"","dpi":72,"label":"unnamed-chunk-1","fig-width":7,"fig-cap":""}},{"code":"\n# Wir wählen zunächst nur die männlichen Studierenden aus und speichern \n# sie in einem neuen Objekt.\nstudents.m <- students[students$Gender == \"m\", ]\n\n# Für diese Studierenden tragen wir in einem einfachen Plot die Variable \n# 'Semester' gegen die Variable 'Age' ab. So können wir außergewöhnliche \n# Werte visuell bestimmen.\nplot(x = students.m$Age, y = students.m$Semester)\n\n# Es gibt offenbar einige sehr hohe Werte bei 'Semester'. Wir vergleichen\n# Mittelwert und Median von 'Semester' der männlichen Studierenden:\nmean(students.m$Semester, na.rm = TRUE)\nmedian(students.m$Semester, na.rm = TRUE)\n\n\n# Ausreißer können manuell entfernt werden. Folgende Befehle entfernen \n# Beobachtungen, bei denen die Semesterangaben größer oder gleich 10 Semester sind,\n# und berechnet im Anschluss den Mittelwert und Median des bereinigten Datensatzes:\nstudents.m.clean <- students.m[students.m$Semester < 10, ]\nmean(students.m.clean$Semester, na.rm = TRUE)\nmedian(students.m.clean$Semester, na.rm = TRUE)\n\n# Alternativ können auch getrimmte Mittelwerte betrachtet werden um Ausreißer zu beseitigen. \n# Führe folgende Befehle aus und beachte, wie unterschiedliche Werte für 'trim' den \n# resultierenden Mittelwert beeinflussen:\nmean(students.m$Semester, trim = 0.1, na.rm = TRUE)\nmean(students.m$Semester, trim = 0.3, na.rm = TRUE)\nmean(students.m$Semester, trim = 0.5, na.rm = TRUE)\nmedian(students.m$Semester, na.rm = TRUE)\n","id":2,"options":{"warning":"true","message":"true","classes":"","results":"markup","autorun":"false","context":"interactive","output":"true","fig-height":5,"out-width":"700px","comment":"","out-height":"","dpi":72,"label":"unnamed-chunk-2","fig-width":7,"fig-cap":""}}];
+globalThis.qwebrCellDetails = [{"code":"\n\n# Download a dataset\ndownload.file(\n  'https://raw.githubusercontent.com/DaChro/geostat_ex/main/data/students.rdata',\n  'students.rdata'\n)\nload(\"students.rdata\")","id":1,"options":{"context":"setup","comment":"","out-height":"","results":"markup","autorun":"true","fig-height":5,"out-width":"700px","output":"true","message":"true","label":"unnamed-chunk-1","classes":"","fig-width":7,"fig-cap":"","warning":"true","dpi":72}},{"code":"\n# Wir wählen zunächst nur die männlichen Studierenden aus und speichern \n# sie in einem neuen Objekt.\nstudents.m <- students[students$Gender == \"m\", ]\n\n# Für diese Studierenden tragen wir in einem einfachen Plot die Variable \n# 'Semester' gegen die Variable 'Age' ab. So können wir außergewöhnliche \n# Werte visuell bestimmen.\nplot(x = students.m$Age, y = students.m$Semester)\n\n# Es gibt offenbar einige sehr hohe Werte bei 'Semester'. Wir vergleichen\n# Mittelwert und Median von 'Semester' der männlichen Studierenden:\nmean(students.m$Semester, na.rm = TRUE)\nmedian(students.m$Semester, na.rm = TRUE)\n\n\n# Ausreißer können manuell entfernt werden. Folgende Befehle entfernen \n# Beobachtungen, bei denen die Semesterangaben größer oder gleich 10 Semester \n# sind, und berechnet im Anschluss den Mittelwert und Median des bereinigten \n# Datensatzes:\nstudents.m.clean <- students.m[students.m$Semester < 10, ]\nmean(students.m.clean$Semester, na.rm = TRUE)\nmedian(students.m.clean$Semester, na.rm = TRUE)\n\n# Alternativ können auch getrimmte Mittelwerte betrachtet werden um Ausreißer\n# zu beseitigen. Führe folgende Befehle aus und beachte, wie unterschiedliche \n# Werte für 'trim' den resultierenden Mittelwert beeinflussen:\nmean(students.m$Semester, trim = 0.1, na.rm = TRUE)\nmean(students.m$Semester, trim = 0.3, na.rm = TRUE)\nmean(students.m$Semester, trim = 0.5, na.rm = TRUE)\nmedian(students.m$Semester, na.rm = TRUE)\n","id":2,"options":{"context":"interactive","comment":"","out-height":"","results":"markup","autorun":"false","fig-height":5,"out-width":"700px","output":"true","message":"true","label":"unnamed-chunk-2","classes":"","fig-width":7,"fig-cap":"","warning":"true","dpi":72}}];
 
 </script>
 <script type="module">
@@ -1189,6 +1189,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -1223,7 +1241,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');

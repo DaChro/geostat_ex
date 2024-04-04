@@ -27,8 +27,8 @@ students$ali <- ((students$Semester / 2) / students$Age) * 100
 quantile()
 
 
-# Um zu bestimmen, wieviele Werte der gefragten Variablen es insgesamt (ohne NA-Werte) gibt, 
-# kann der folgende Befehl verwendet werden. 
+# Um zu bestimmen, wieviele Werte der gefragten Variablen es insgesamt 
+# (ohne NA-Werte) gibt, kann der folgende Befehl verwendet werden. 
 length(na.omit(students$ali))
 
 # Nutze diesen Befehl und versuche eine ähnliche Befehlskette wie bei 
