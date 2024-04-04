@@ -3,10 +3,7 @@ title: ""
 engine: knitr
 filters:
  - webr
-
-
 ---
-
 
 ```{webr-r}
 
@@ -29,31 +26,33 @@ load("students.rdata")
 hist(students$Age)
 
 # Die erste Frage dieser Aufgabe kann mit einem Blick auf das 
-# richtige Histogramm bereits beantwortet werden.Vervollständige dafür den folgenden Befehl.
+# richtige Histogramm bereits beantwortet werden.Vervollständige dafür den 
+# folgenden Befehl.
 hist()
 
-# Setzen des Parameters plot=FALSE gibt eine textuelle Ausgabe anstelle einer Grafik.
+# Setzen des Parameters plot=FALSE gibt eine textuelle Ausgabe anstelle 
+# einer Grafik.
 hist(students$Age, plot=FALSE)
 
-# Um genaue Häufigkeiten zu ermitteln, kann man Einträge im data.frame innerhalb bestimmter 
-# Wertebereiche selektieren und zählen.
+# Um genaue Häufigkeiten zu ermitteln, kann man Einträge im data.frame 
+# innerhalb bestimmter Wertebereiche selektieren und zählen.
 # Bei welchen Einträgen ist 'Age' > oder = 23 ?
 students$Age>=23 #gibt jeweils TRUE oder FALSE zurück
 
-# Wenn man nun zählen möchte, für wieviele Werte die Bedingung ">=23" zutrifft, 
-# kann man zusätzlich den Befehl 'sum()' verwenden.
-# Wenn dieser Behfehl auf eine boolsche Variable -wie sie aus dem obigen Befehl resultiert- 
-# angewandt wird, wird bei der Summierung TRUE als 1 und FALSE als 0 interpretiert.
+# Wenn man nun zählen möchte, für wieviele Werte die Bedingung 
+# ">=23" zutrifft, kann man zusätzlich den Befehl 'sum()' verwenden.
+# Wenn dieser Behfehl auf eine boolsche Variable -wie sie aus dem obigen 
+# Befehl resultiert- angewandt wird, wird bei der Summierung TRUE als 1 
+# und FALSE als 0 interpretiert.
 # Wieviele Studierende sind mindestens23 ?
 sum(students$Age>=23)
 
-# Das funktioniert auch mit kombinierten Bedingungen mit Hilfe des '&'-Operators.
-# Wieviele Studierende sind mindestens 23 und unter 25?
+# Das funktioniert auch mit kombinierten Bedingungen mit Hilfe des 
+#'&'-Operators. 
+#'Wieviele Studierende sind mindestens 23 und unter 25?
 sum(students$Age>=23 & students$Age<25)
 
-# Kombiniere die richtigen Abfragen der richtigen Variablen, um die anderen beiden
-# Fragen der Aufgabe zu beantworten.
+# Kombiniere die richtigen Abfragen der richtigen Variablen, um die 
+# anderen beiden Fragen der Aufgabe zu beantworten.
 
 ```
-
-
