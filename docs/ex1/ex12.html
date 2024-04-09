@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.552">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -200,7 +200,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"# Zunächst laden wir wieder die Daten und bestimmen die Zeilen 40-60.\ndata(iris) \niris_sub <- \n\n# Benutze nun den Befehl 'summary()', um die Aufgabe zu lösen.\n","id":1,"options":{"warning":"true","label":"unnamed-chunk-1","comment":"","out-width":"700px","context":"interactive","output":"true","fig-height":5,"fig-cap":"","autorun":"false","results":"markup","classes":"","out-height":"","dpi":72,"fig-width":7,"message":"true"}}];
+globalThis.qwebrCellDetails = [{"code":"# Zunächst laden wir wieder die Daten und bestimmen die Zeilen 40-60.\ndata(iris) \niris_sub <- \n\n# Benutze nun den Befehl 'summary()', um die Aufgabe zu lösen.\n","id":1,"options":{"message":"true","output":"true","results":"markup","autorun":"false","context":"interactive","comment":"","label":"unnamed-chunk-1","out-width":"700px","classes":"","fig-cap":"","dpi":72,"warning":"true","out-height":"","fig-height":5,"fig-width":7}}];
 
 </script>
 <script type="module">
@@ -1187,6 +1187,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -1221,7 +1239,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');

@@ -3,11 +3,7 @@ title: ""
 engine: knitr
 filters:
  - webr
-
-
 ---
-
-
 
 ```{webr-r}
 
@@ -16,7 +12,7 @@ filters:
 # den Befehl 'data()'.
 data(iris) 
 
-# Wir erstellen ein subset der Daten, welches nur Zeilen 40 bis 60 enthält 
+# Wir erstellen ein subset der Daten, welches nur Zeilen 40 bis 60 enthält, 
 # und speichern es in der Variable 'iris_sub'.
 iris_sub <- iris[40:60,] 
 
@@ -25,7 +21,3 @@ iris_sub <- iris[40:60,]
 iris_sub  
 
 ```
-
-
-
-

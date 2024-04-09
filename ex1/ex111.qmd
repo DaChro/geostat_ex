@@ -28,9 +28,9 @@ load("students.rdata")
 # Mit dem ? kann die Hilfe zu einer Funktion aufgerufen werden:
 ?sum
 
-# Um die Aufgabe zu lösen, kann es hilfreich sein, die Befehle komplett und/oder 
-# die darin vorkommenden R-Funktionen einzeln einmal selbst hier oder in R 
-# auszuführen, um zu sehen, was dort jeweils passiert:
+# Um die Aufgabe zu lösen, kann es hilfreich sein, die Befehle komplett 
+# und/oder die darin vorkommenden R-Funktionen einzeln einmal selbst hier 
+# oder in R auszuführen, um zu sehen, was dort jeweils passiert:
 
 #1
 m = sum(iris$Sepal.Length[40:60]) / 21

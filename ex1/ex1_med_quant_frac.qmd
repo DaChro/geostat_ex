@@ -20,7 +20,7 @@ load("students.rdata")
 
 ```{webr-r}
 # Wir Berechnen den Median der Variable 'Length' im 'students'-Datensatz.
-# Dabei entfernen wir eventuelle NA-Werte
+# Dabei entfernen wir eventuelle NA-Werte.
 med <- median(students$Length, na.rm = TRUE)
 med # Ausgabe des Wertes
 
@@ -31,5 +31,3 @@ fracs <- c(0.25, 0.5, 0.75)
 quartiles <- quantile(students$Length, prob = fracs, na.rm = TRUE)
 quartiles # Ausgabe des Wertes
 ```
-
-

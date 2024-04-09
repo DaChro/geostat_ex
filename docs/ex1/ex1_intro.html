@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.552">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -200,7 +200,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"\n# Wir laden den Datensatz 'iris'. Da dieser Datensatz bereits\n# mit der Software mitgeliefert wird, geht dies einfach über \n# den Befehl 'data()'.\ndata(iris) \n\n# Wir erstellen ein subset der Daten, welches nur Zeilen 40 bis 60 enthält \n# und speichern es in der Variable 'iris_sub'.\niris_sub <- iris[40:60,] \n\n# Wir lassen das in der Variable 'iris_sub' gespeicherte Objekt ausgeben, \n# also die Zeilen 40 bis 60 des iris Datensatzes.\niris_sub  ","options":{"label":"unnamed-chunk-1","dpi":72,"results":"markup","out-width":"700px","fig-width":7,"context":"interactive","fig-height":5,"out-height":"","classes":"","warning":"true","message":"true","autorun":"false","comment":"","fig-cap":"","output":"true"},"id":1}];
+globalThis.qwebrCellDetails = [{"id":1,"code":"\n# Wir laden den Datensatz 'iris'. Da dieser Datensatz bereits\n# mit der Software mitgeliefert wird, geht dies einfach über \n# den Befehl 'data()'.\ndata(iris) \n\n# Wir erstellen ein subset der Daten, welches nur Zeilen 40 bis 60 enthält, \n# und speichern es in der Variable 'iris_sub'.\niris_sub <- iris[40:60,] \n\n# Wir lassen das in der Variable 'iris_sub' gespeicherte Objekt ausgeben, \n# also die Zeilen 40 bis 60 des iris Datensatzes.\niris_sub  ","options":{"out-height":"","message":"true","comment":"","fig-width":7,"label":"unnamed-chunk-1","fig-cap":"","fig-height":5,"context":"interactive","warning":"true","output":"true","results":"markup","classes":"","autorun":"false","out-width":"700px","dpi":72}}];
 
 </script>
 <script type="module">
@@ -1187,6 +1187,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -1221,7 +1239,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');

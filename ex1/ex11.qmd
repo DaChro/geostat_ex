@@ -13,8 +13,8 @@ data(iris)
 # gezeigt.
 iris_sub <- 
 
-# Um auf einzelne Spalten des eines data.frame wie in diesem Beispiel zuzugreifen, 
-# kann der '$'-Operator verwendet werden, z.B.:
+# Um auf einzelne Spalten des eines data.frame wie in diesem Beispiel 
+# zuzugreifen, kann der '$'-Operator verwendet werden, z.B.:
 iris_sub$Species
 
   
@@ -22,8 +22,8 @@ iris_sub$Species
 # 'mean()', 'sd()', 'median()' und 'quantile()'. Der Befehl 'quantile()' 
 # benötigt für die Beantwortung der entsprechenden Fragen auch ein 
 # Argument 'prob', welches das gewünschte Quantil spezifiziert.
-# So könnte z.B. das 0.20-Quantil der Variable Sepal.Width des iris_sub Datensatzes 
-# berechnet werden:  
+# Beispiel: das 0.20-Quantil der Variable 'Sepal.Width' des 'iris_sub' 
+# Datensatzes könnte so berechnet werden:  
 quantile(iris_sub$Sepal.Width, prob = 0.2)
 
 # Bestimme nun die in der Aufgabe gefragten Kennwerte.

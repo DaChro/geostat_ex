@@ -3,10 +3,7 @@ title: ""
 engine: knitr
 filters:
  - webr
-
-
 ---
-
 
 ```{webr-r}
 
@@ -22,10 +19,8 @@ load("students.rdata")
 ```
 
 ```{webr-r}
-# Nutze den Befehl 'table()', um dir eine Übersicht zu verschaffen.
+# Nutze den Befehl 'table()', um dir eine Übersicht über eine Variable
+# zu verschaffen.
 
 
 ```
-
-
-
