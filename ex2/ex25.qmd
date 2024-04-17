@@ -21,14 +21,13 @@ load("students.rdata")
 ```{webr-r}
 #| out-width: 70%
 #| out-height: 70%
-# Der folgende Befehl zeigt die Syntax von 'boxplot()' mit generischen Argumenten.
-# Setze an ihrer Stelle die richtigen Argumente ein, um den Boxplot für unsere 
-# Fragestellung zu erstellen.
+# Der folgende Befehl zeigt die Syntax von 'boxplot()' mit generischen 
+# Argumenten. Setze an ihrer Stelle die richtigen Argumente ein, um den 
+# Boxplot für unsere Fragestellung zu erstellen.
 # Für 'y' muss dabei die zu untersuchende Variable gewählt werden,
 # für 'grp' die kategorische Variable, nach der unterschieden werden soll,
 # und für 'data' der Datensatz, aus dem beide Variablen stammen.
-# Der Befehl kann auch anders genutzt werden, um einen Boxplot ohne Unterscheidung zu erstellen.
+# Der Befehl kann auch anders genutzt werden, um einen Boxplot ohne 
+# Unterscheidung zu erstellen.
 boxplot(data$y ~ data$grp)
 ```
-
-

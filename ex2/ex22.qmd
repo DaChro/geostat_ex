@@ -25,17 +25,16 @@ load("students.rdata")
 # ist die textuelle Ausgabe des Histogramms nützlich.
 hist(students$Length,plot = FALSE)
 
-# Über den $-Operator können wir auf einzelne Komponenten der Ausgabe zugreifen, 
-# z.B. die Klassengrenzen.
+# Über den $-Operator können wir auf einzelne Komponenten der Ausgabe 
+# zugreifen, z.B. die Klassengrenzen.
 hist(students$Length,plot = FALSE)$breaks
 
 # Um die Summe aller Balkenhöhen zu berechnen, 
 # finde die entsprechende Komponente der Ausgabe und nutze 'sum()'.
 
 
-# Auf ähnliche Weise kann der Flächeninhalt im Dichte-Histogramm berechnet werden.
-# Dafür muss auch die Klassenbreite berücksichtigt werden.
+# Auf ähnliche Weise kann der Flächeninhalt im Dichte-Histogramm berechnet 
+# werden. Dafür muss auch die Klassenbreite berücksichtigt werden.
 
 
 ```
-
