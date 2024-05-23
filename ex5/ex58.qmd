@@ -1,0 +1,19 @@
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+---
+
+
+```{webr-r}
+# Wir laden zunächst wieder den 'iris'-Datensatz.
+data(iris)
+# Vervollständige den R-Befehl mit den richtigen Argumenten und interpretiere
+# das Ergebnis, um die letzte Frage dieser Aufgabe zu beantworten.
+t.test(x = pm10$VMUE, alternative  = , mu = , conf.level =)
+
+
+```
+
+
