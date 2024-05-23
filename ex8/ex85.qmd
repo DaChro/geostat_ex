@@ -7,6 +7,9 @@ filters:
 
 
 ```{webr-r}
+#| out-width: 70%
+#| out-height: 70%
+
 data("iris")
 subset_full<-iris[iris$Species=="versicolor", ]
 LM.all = lm(Petal.Width ~ Petal.Length, subset_full)
