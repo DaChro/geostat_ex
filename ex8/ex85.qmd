@@ -1,0 +1,21 @@
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+---
+
+
+```{webr-r}
+data("iris")
+subset_full<-iris[iris$Species=="versicolor", ]
+LM.all = lm(Petal.Width ~ Petal.Length, subset_full)
+pred.plim <- predict(LM.all, interval = "prediction") 
+pred.clim <- predict(LM.all, interval = "confidence")
+plot(Petal.Width ~ Petal.Length, subset_full)
+abline(LM.all) 
+points(subset_full$Petal.Length, pred.clim[ , "lwr"], col = 3, pch = "_")
+points(subset_full$Petal.Length, pred.clim[ , "upr"], col = 3, pch = "_")
+points(subset_full$Petal.Length, pred.plim[ , "lwr"], col = 4, pch = "_")
+points(subset_full$Petal.Length, pred.plim[ , "upr"], col = 4, pch = "_")
+```
