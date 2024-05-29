@@ -3,10 +3,7 @@ title: ""
 engine: knitr
 filters:
  - webr
-
-
 ---
-
 
 ```{webr-r}
 
@@ -24,12 +21,11 @@ load("sic97.RData")
 
 ```
 
-
 ```{webr-r}
 library(sp)
 
 # Erstelle die räumliche Stichprobe mit dem Befehl 'spsample()'
-# Ergänze dafür die Größe der Stichptobe 'n' und das Stichprobendesign 'type'.
+# Ergänze dafür die Größe der Stichprobe 'n' und das Stichprobendesign 'type'.
 pts1 = spsample(demstd, n = , type = )
 
 # Mit dem Befehl 'points()' kannst du die erstellten Punkte einem 
@@ -40,6 +36,3 @@ points(pts1, col = "white", pch = 3)
 
 
 ```
-
-
-

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.552">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -200,7 +200,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"code":"\n\nwebr::install(\"sp\")\n\n\n# Download a dataset\ndownload.file(\n  'https://raw.githubusercontent.com/DaChro/geostat_ex/main/data/sic97.RData',\n  'sic97.RData'\n)\nload(\"sic97.RData\")","options":{"output":"true","autorun":"true","results":"markup","out-height":"","comment":"","out-width":"700px","context":"setup","label":"unnamed-chunk-1","warning":"true","classes":"","fig-height":5,"fig-cap":"","dpi":72,"fig-width":7,"message":"true"}},{"id":2,"code":"library(sp)\n\n# Erstelle die räumliche Stichprobe mit dem Befehl 'spsample()'\n# Ergänze dafür die Größe der Stichptobe 'n' und das Stichprobendesign 'type'.\npts1 = spsample(demstd, n = , type = )\n\n# Mit dem Befehl 'points()' kannst du die erstellten Punkte einem \n# räumlichen Plot wie etwa dem Höhenmodell hinzufügen.\n# Mit den Argumenten 'col' und 'pch' kannst du die Farbe und Form der Symbole beeinflussen.\nplot(demstd)\npoints(pts1, col = \"white\", pch = 3)\n","options":{"output":"true","autorun":"false","results":"markup","out-height":"","comment":"","out-width":"700px","context":"interactive","label":"unnamed-chunk-2","warning":"true","classes":"","fig-height":5,"fig-cap":"","dpi":72,"fig-width":7,"message":"true"}}];
+globalThis.qwebrCellDetails = [{"code":"\n\nwebr::install(\"sp\")\n\n\n# Download a dataset\ndownload.file(\n  'https://raw.githubusercontent.com/DaChro/geostat_ex/main/data/sic97.RData',\n  'sic97.RData'\n)\nload(\"sic97.RData\")","id":1,"options":{"autorun":"true","output":"true","context":"setup","comment":"","label":"unnamed-chunk-1","results":"markup","classes":"","fig-cap":"","warning":"true","dpi":72,"message":"true","fig-height":5,"out-height":"","fig-width":7,"out-width":"700px"}},{"code":"library(sp)\n\n# Erstelle die räumliche Stichprobe mit dem Befehl 'spsample()'\n# Ergänze dafür die Größe der Stichprobe 'n' und das Stichprobendesign 'type'.\npts1 = spsample(demstd, n = , type = )\n\n# Mit dem Befehl 'points()' kannst du die erstellten Punkte einem \n# räumlichen Plot wie etwa dem Höhenmodell hinzufügen.\n# Mit den Argumenten 'col' und 'pch' kannst du die Farbe und Form der Symbole beeinflussen.\nplot(demstd)\npoints(pts1, col = \"white\", pch = 3)\n","id":2,"options":{"autorun":"false","output":"true","context":"interactive","comment":"","label":"unnamed-chunk-2","results":"markup","classes":"","fig-cap":"","warning":"true","dpi":72,"message":"true","fig-height":5,"out-height":"","fig-width":7,"out-width":"700px"}}];
 
 </script>
 <script type="module">
@@ -1189,6 +1189,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -1223,7 +1241,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
