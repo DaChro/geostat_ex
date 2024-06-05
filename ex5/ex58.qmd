@@ -11,7 +11,7 @@ filters:
 data(iris)
 # Vervollständige den R-Befehl mit den richtigen Argumenten und interpretiere
 # das Ergebnis, um die letzte Frage dieser Aufgabe zu beantworten.
-t.test(x = pm10$VMUE, alternative  = , mu = , conf.level =)
+t.test(x = iris$Sepal.Length, alternative  = , mu = , conf.level =)
 
 
 ```
