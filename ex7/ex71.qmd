@@ -25,7 +25,13 @@ load("tabelle1.RData")
 # aus der Tabelle holt und mit dem "combine"-Befehl c() zu einem Vektor zusammenfügt:
 tabelle1.nogroups = c(tabelle1$gruppe.1,tabelle1$gruppe.2, tabelle1$gruppe.3)
 
+# Nun kannst du alle erforderlichen Werte für die Durchführung der ANOVA berechnen. 
+# Beginne am besten mit SSY.
+
+m.grand = 
+SSY =
+
+# ...
 
 
 ```
-
