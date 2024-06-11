@@ -20,9 +20,10 @@ load("tabelle1.RData")
 
 ```{webr-r}
 # Für einige Berechnungen im Rahmen dieser Aufgabe wird es nützlich sein, 
-# auch einmal alle Messungen (nicht nach Gruppen getrennt) in einer Variable
-# zu speichern. Dies könnt ihr z.B.  erreichen, indem ihr euch die entsprechenden Spalten 
-# aus der Tabelle holt und mit dem "combine"-Befehl c() zu einem Vektor zusammenfügt:
+# auch einmal alle Messungen zusammen (nicht nach Gruppen getrennt) in einer 
+# Variable zu speichern. Dies könnt ihr z.B.  erreichen, indem ihr euch die
+# entsprechenden Spalten aus der Tabelle holt und mit dem 
+# "combine"-Befehl c() zu einem Vektor zusammenfügt:
 tabelle1.nogroups = c(tabelle1$gruppe.1,tabelle1$gruppe.2, tabelle1$gruppe.3)
 
 # Nun kannst du alle erforderlichen Werte für die Durchführung der ANOVA berechnen. 
