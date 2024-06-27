@@ -1,0 +1,23 @@
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+---
+
+
+```{webr-r}
+library(sp)
+data(meuse)
+
+# Wir benutzen wieder die R Funktion 'lm()' zur Anpassung des einfachen 
+# linearen Regressionsmodells.
+
+m1 = lm(....)
+summary(m1)
+
+
+```
+
+
+

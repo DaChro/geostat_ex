@@ -1,0 +1,34 @@
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+---
+
+
+```{webr-r}
+library(sp)
+data(meuse)
+
+# Die Modellparameter können direkt durch die 'lm()' Funktion geschätzt werden. 
+# Gebt dazu 'dist' und 'elev' als unabhängige und 'lead' als abhängige Variable an.
+
+m2 = lm(abhängige_Variable ~ unabh_Var1 + Unabh_Var2, Datensatz)
+
+# m die durchschnittliche zu erwartende Bleikonzentration bei gegebener 
+# Distanz und Höhe zu berechnen, können wir die Werte direkt in die Ebenengleichung 
+# einsetzen oder die 'predict()Ä Funktion in R benutzen.
+
+predict(m2,data.frame(dist=...., elev=....))
+
+# Das 95% Konfidenzintervall für diese Vorhersage kann in R durch die 
+# predict() Funktion unter zusätzlicher Angabe des Parameters 
+# 'interval = "prediction"' und eines Konfidenzniveaus berechnen.
+
+predict(m2,data.frame(....),interval = "prediction",level = ....)
+
+
+```
+
+
+
