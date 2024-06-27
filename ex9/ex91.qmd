@@ -13,7 +13,7 @@ data(meuse)
 # Die Modellparameter können direkt durch die 'lm()' Funktion geschätzt werden. 
 # Gebt dazu 'dist' und 'elev' als unabhängige und 'lead' als abhängige Variable an.
 
-m2 = lm(abhängige_Variable ~ unabh_Var1 + Unabh_Var2, Datensatz)
+m2 = lm(abhängige_Variable ~ unabh_Var1 + unabh_Var2, Datensatz)
 
 # m die durchschnittliche zu erwartende Bleikonzentration bei gegebener 
 # Distanz und Höhe zu berechnen, können wir die Werte direkt in die Ebenengleichung 
