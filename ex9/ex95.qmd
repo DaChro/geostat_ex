@@ -1,0 +1,20 @@
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+---
+
+
+```{webr-r}
+library(sp)
+data(meuse)
+
+# Den Befehl 'cor' zur Berechnung der Korrelation kennt ihr bereits. 
+# Wenn ihr direkt die Korrelationen für mehr als 2 Variablen aus einem 
+# Datensatz berechnen wollt, geht das ebenfalls nach dem Schema:
+
+cor(x = datensatz[c("variable1", "variable2", "variable3")])
+
+
+```
