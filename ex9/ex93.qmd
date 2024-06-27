@@ -1,0 +1,21 @@
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+---
+
+
+```{webr-r}
+library(sp)
+data(meuse)
+
+# In R wird die Interaktion als zusätzlicher Regressor mit beiden Variablen 
+# getrennt durch ein : formuliert, also nach dem Schema Variable1:Variable2. 
+# Ein entsprechender Befehl könnte z.B. so aussehen:
+
+lm(abhVariable ~ erklVariable1 + erklVariable2 + erklVariable1:erklVariable2, datensatz)
+
+
+```
+

@@ -1,0 +1,26 @@
+---
+title: ""
+engine: knitr
+filters:
+ - webr
+---
+
+
+```{webr-r}
+library(sp)
+data(meuse)
+
+# Die kleine Stichprobe kann gezogen werden durch:
+meuse.subset = meuse[11:20,]
+
+# Modell 1:
+m1.subset = lm(.... ~ ...., ....)
+summary(m1.subset)
+
+# Modell 2:
+m2.subset = lm(.... ~ .... + ...., ....)
+summary(m2.subset)
+
+
+```
+
