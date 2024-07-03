@@ -15,14 +15,14 @@ data(meuse)
 
 m2 = lm(abhängige_Variable ~ unabh_Var1 + unabh_Var2, Datensatz)
 
-# m die durchschnittliche zu erwartende Bleikonzentration bei gegebener 
+# Um die durchschnittliche zu erwartende Bleikonzentration bei gegebener 
 # Distanz und Höhe zu berechnen, können wir die Werte direkt in die Ebenengleichung 
-# einsetzen oder die 'predict()Ä Funktion in R benutzen.
+# einsetzen oder die 'predict()' Funktion in R benutzen.
 
 predict(m2,data.frame(dist=...., elev=....))
 
-# Das 95% Konfidenzintervall für diese Vorhersage kann in R durch die 
-# predict() Funktion unter zusätzlicher Angabe des Parameters 
+# Das 95% Konfidenzintervall für diese Vorhersage kann man in R durch die 
+# 'predict()' Funktion unter zusätzlicher Angabe des Parameters 
 # 'interval = "prediction"' und eines Konfidenzniveaus berechnen.
 
 predict(m2,data.frame(....),interval = "prediction",level = ....)
