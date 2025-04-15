@@ -32,7 +32,7 @@ quantile()
 length(na.omit(students$ali))
 
 # Nutze diesen Befehl und probiere eine ähnliche Befehlskette wie bei 
-# Frage 2 dieser Übung, um die zweite Frage zu beantworten.
+# Frage 7 dieser Übung, um die zweite Frage zu beantworten.
 
 
 
