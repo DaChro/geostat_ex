@@ -31,8 +31,9 @@ quantile()
 # (ohne NA-Werte) gibt, kann der folgende Befehl verwendet werden. 
 length(na.omit(students$ali))
 
-# Nutze diesen Befehl und probiere eine ähnliche Befehlskette wie bei 
-# Frage 7 dieser Übung, um die zweite Frage zu beantworten.
+# Nutze diesen Befehl und kombiniere ihn mit einer ähnlichen
+# Befehlskette wie bei Frage 7 dieser Übung (Bestimmung der Anzahl 
+# von Werten über/unter einem Schwellwert), um die zweite Frage zu beantworten.
 
 
 
