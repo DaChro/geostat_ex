@@ -7,6 +7,14 @@ filters:
 
 
 ```{webr-r}
+#| context: setup
+
+webr::install("sp")
+
+```
+
+```{webr-r}
+
 library(sp)
 data(meuse)
 
@@ -29,6 +37,3 @@ predict(m2,data.frame(....),interval = "prediction",level = ....)
 
 
 ```
-
-
-
