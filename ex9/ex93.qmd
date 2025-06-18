@@ -5,6 +5,12 @@ filters:
  - webr
 ---
 
+```{webr-r}
+#| context: setup
+
+webr::install("sp")
+
+```
 
 ```{webr-r}
 library(sp)
@@ -18,4 +24,3 @@ lm(abhVariable ~ erklVariable1 + erklVariable2 + erklVariable1:erklVariable2, da
 
 
 ```
-

@@ -5,6 +5,12 @@ filters:
  - webr
 ---
 
+```{webr-r}
+#| context: setup
+
+webr::install("sp")
+
+```
 
 ```{webr-r}
 library(sp)
@@ -23,4 +29,3 @@ summary(m2.subset)
 
 
 ```
-
